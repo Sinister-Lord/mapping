@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Pagination</title>
+</head>
+<body>
+
+
+
+<p> Ascending and Descending mapped numbers</p>
+<p id="product_value"></p>
+<button onclick="ascending()">Ascending</button>
+<button onclick="descending()">Descending</button>
+<script src = "main.js"></script>
+ <script>
+    var numbers = [25 , 12 , 19 , 91]
+    function Myfunction(num){
+        return num *50;
+    }
+    var newarray = numbers.map(Myfunction);
+    document.getElementById(product_value).innerHTML = "The mapped values are:" + newarray;
+    function ascending() {
+        newarray.sort(function(a,b){return a-b});
+        document.getElementById("product_value").innerHTML = "The ascending order is:" + newarray;
+
+    }
+    function descending() {
+        newarray.sort(function(a,b){return a-b});
+        document.getElementById("product_value").innerHTML = "The descending order is:" + newarray;
+    }
+ </script>
